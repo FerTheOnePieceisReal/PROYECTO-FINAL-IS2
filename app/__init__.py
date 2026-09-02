@@ -13,6 +13,7 @@ from redis import Redis
 import rq
 from config import Config
 
+#Cambio, un nuevo comentario. Fer :D
 
 def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])

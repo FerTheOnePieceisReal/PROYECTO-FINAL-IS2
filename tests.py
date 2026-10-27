@@ -42,7 +42,7 @@ class TestUserModel(unittest.TestCase):
 
     def test_follow_unfollow(self):
         # Arrange
-        u1 = User(username='alice, email='alice@example.com'')
+        u1 = User(username='alice', email='alice@example.com')
         u2 = User(username='bob', email='bob@example.com')
         db.session.add_all([u1, u2])
         db.session.commit()
@@ -68,7 +68,7 @@ class TestUserModel(unittest.TestCase):
 
     def test_get_token(self):
         # Arrange
-        u = User(username='charlie', email='charlie@example.com')
+        u = User(username='charlie',email='charlie@example.com')
         db.session.add(u)
         db.session.commit()
         

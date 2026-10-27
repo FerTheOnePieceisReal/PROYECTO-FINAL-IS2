@@ -1,34 +1,45 @@
-[tool.poetry]
+[project]
 name = "microblog"
-version = "0.1.0"
-description = "Proyecto Microblog para Ingeniería de Software II"
-authors = ["Cruz Ponce <tu_correo@ejemplo.com>"]
+version = "1.0.0"
+description = "Aplicacion web de microblog basada en Flask"
 readme = "README.md"
+requires-python = ">=3.13,<4.0"
 
-[tool.poetry.dependencies]
-python = "^3.14.7"
-flask = "^3.0.0"
-python-dotenv = "^1.0.0"
-flask-sqlalchemy = "^3.1.1"
-flask-migrate = "^4.1.0"
-flask-login = "^0.6.3"
-flask-wtf = "^1.3.0"
-flask-mail = "^0.10.0"
-flask-babel = "^4.0.0"
-flask-moment = "^1.0.6"
-email-validator = "^2.3.0"
-pyjwt = "^2.15.1"
-elasticsearch = "^9.5.1"
-redis = "^8.1.0"
-rq = "^2.12.0"
-flask-httpauth = "^4.8.1"
-langdetect = "^1.0.9"
-requests = "^2.34.2"
+dependencies = [
+    "alembic==1.13.1",
+    "Babel==2.14.0",
+    "Flask==3.0.2",
+    "Flask-Babel==4.0.0",
+    "Flask-HTTPAuth==4.8.0",
+    "Flask-Login==0.6.3",
+    "Flask-Mail==0.9.1",
+    "Flask-Migrate==4.0.5",
+    "Flask-Moment==1.0.5",
+    "Flask-SQLAlchemy==3.1.1",
+    "Flask-WTF==1.2.1",
+    "greenlet==3.2.4",
+    "gunicorn==21.2.0",
+    "Jinja2==3.1.3",
+    "Mako==1.3.2",
+    "MarkupSafe==2.1.5",
+    "multidict==6.6.4",
+    "psycopg2-binary==2.9.10",
+    "python-dotenv==1.0.1",
+    "SQLAlchemy==2.0.28",
+    "WTForms==3.1.2"
+]
+
+[tool.poetry]
+packages = [
+    { include = "app" }
+]
+include = [
+    "app/templates/**/*.html",
+    "app/templates/**/*.txt",
+    "app/static/**/*",
+    "app/translations/**/*"
+]
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
-[dependency-groups]
-dev = [
-    "coverage (>=7.17.0,<8.0.0)"
-]

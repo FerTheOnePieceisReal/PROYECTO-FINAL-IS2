@@ -1,82 +1,106 @@
-import unittest
+#!/usr/bin/env python
 from datetime import datetime, timezone, timedelta
+import unittest
 from app import create_app, db
-from app.models import User
+from app.models import User, Post
 from config import Config
+
 
 class TestConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = 'sqlite://'
+    ELASTICSEARCH_URL = None
 
-class TestUserModel(unittest.TestCase):
+
+class UserModelCase(unittest.TestCase):
     def setUp(self):
-        # Inicializar (Arrange) el entorno de prueba
         self.app = create_app(TestConfig)
         self.app_context = self.app.app_context()
         self.app_context.push()
         db.create_all()
 
     def tearDown(self):
-        # Limpiar el entorno
         db.session.remove()
         db.drop_all()
         self.app_context.pop()
 
     def test_password_hashing(self):
-        # Arrange
-        u = User(username='susan')
-        # Act
-        u.set_password('clave123')
-        # Assert
-        self.assertFalse(u.check_password('falsa456'))
-        self.assertTrue(u.check_password('clave123'))
+        u = User(username='susan', email='susan@example.com')
+        u.set_password('cat')
+        self.assertFalse(u.check_password('dog'))
+        self.assertTrue(u.check_password('cat'))
 
     def test_avatar(self):
-        # Arrange
-        u = User(username='john', email='test@example.com')
-        # Act
-        avatar_url = u.avatar(128)
-        # Assert
-        expected_url = 'https://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?d=identicon&s=128'
-        self.assertEqual(avatar_url, expected_url)
+        u = User(username='john', email='john@example.com')
+        self.assertEqual(u.avatar(128), ('https://www.gravatar.com/avatar/'
+                                         'd4c74594d841139328695756648b6bd6'
+                                         '?d=identicon&s=128'))
 
-    def test_follow_unfollow(self):
-        # Arrange
-        u1 = User(username='alice', email='alice@example.com')
-        u2 = User(username='bob', email='bob@example.com')
-        db.session.add_all([u1, u2])
+    def test_follow(self):
+        u1 = User(username='john', email='john@example.com')
+        u2 = User(username='susan', email='susan@example.com')
+        db.session.add(u1)
+        db.session.add(u2)
         db.session.commit()
+        following = db.session.scalars(u1.following.select()).all()
+        followers = db.session.scalars(u2.followers.select()).all()
+        self.assertEqual(following, [])
+        self.assertEqual(followers, [])
 
-        # Act & Assert - Estado inicial
-        self.assertFalse(u1.is_following(u2))
-        self.assertEqual(u1.following_count(), 0)
-        
-        # Act - Seguir
         u1.follow(u2)
         db.session.commit()
-        # Assert - Seguir
         self.assertTrue(u1.is_following(u2))
         self.assertEqual(u1.following_count(), 1)
         self.assertEqual(u2.followers_count(), 1)
+        u1_following = db.session.scalars(u1.following.select()).all()
+        u2_followers = db.session.scalars(u2.followers.select()).all()
+        self.assertEqual(u1_following[0].username, 'susan')
+        self.assertEqual(u2_followers[0].username, 'john')
 
-        # Act - Dejar de seguir
         u1.unfollow(u2)
         db.session.commit()
-        # Assert - Dejar de seguir
         self.assertFalse(u1.is_following(u2))
         self.assertEqual(u1.following_count(), 0)
+        self.assertEqual(u2.followers_count(), 0)
 
-    def test_get_token(self):
-        # Arrange
-        u = User(username='charlie',email='charlie@example.com')
-        db.session.add(u)
+    def test_follow_posts(self):
+        # create four users
+        u1 = User(username='john', email='john@example.com')
+        u2 = User(username='susan', email='susan@example.com')
+        u3 = User(username='mary', email='mary@example.com')
+        u4 = User(username='david', email='david@example.com')
+        db.session.add_all([u1, u2, u3, u4])
+
+        # create four posts
+        now = datetime.now(timezone.utc)
+        p1 = Post(body="post from john", author=u1,
+                  timestamp=now + timedelta(seconds=1))
+        p2 = Post(body="post from susan", author=u2,
+                  timestamp=now + timedelta(seconds=4))
+        p3 = Post(body="post from mary", author=u3,
+                  timestamp=now + timedelta(seconds=3))
+        p4 = Post(body="post from david", author=u4,
+                  timestamp=now + timedelta(seconds=2))
+        db.session.add_all([p1, p2, p3, p4])
         db.session.commit()
-        
-        # Act
-        token = u.get_token(expires_in=3600)
+
+        # setup the followers
+        u1.follow(u2)  # john follows susan
+        u1.follow(u4)  # john follows david
+        u2.follow(u3)  # susan follows mary
+        u3.follow(u4)  # mary follows david
         db.session.commit()
-        
-        # Assert
-        self.assertIsNotNone(token)
-        self.assertIsInstance(token, str)
-        self.assertGreater(u.token_expiration.replace(tzinfo=timezone.utc), datetime.now(timezone.utc))
+
+        # check the following posts of each user
+        f1 = db.session.scalars(u1.following_posts()).all()
+        f2 = db.session.scalars(u2.following_posts()).all()
+        f3 = db.session.scalars(u3.following_posts()).all()
+        f4 = db.session.scalars(u4.following_posts()).all()
+        self.assertEqual(f1, [p2, p4, p1])
+        self.assertEqual(f2, [p2, p3])
+        self.assertEqual(f3, [p3, p4])
+        self.assertEqual(f4, [p4])
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

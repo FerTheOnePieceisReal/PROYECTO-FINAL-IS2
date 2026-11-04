@@ -1,0 +1,13 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\ferdd\AppData\Local\pypoetry\Cache\virtualenvs\microblog-P54achnb-py3.14\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\microblog-main
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 3 items
+
+test_login.py::test_login_credenciales_validas PASSED                    [ 33%]
+test_login.py::test_login_contrasena_incorrecta PASSED                   [ 66%]
+test_login.py::test_login_campos_vacios PASSED                           [100%]
+
+============================= 3 passed in 12.59s ==============================

@@ -1,21 +1,3 @@
-#!/usr/bin/env python
-"""
-Laboratorio 05 - Actividad 5: pruebas de la capa de SERVICIOS DE APLICACION
-con dobles de prueba (unittest.mock).
-
-Servicios probados (todos orquestan dependencias externas):
-  * app/tasks.py          -> export_posts / _set_task_progress
-                             (dependencias: db.session [repositorio], rq job, send_email)
-  * app/translate.py      -> translate (dependencia: requests.post)
-  * app/email.py          -> send_email / send_async_email (dependencias: mail, Thread)
-  * app/auth/email.py     -> send_password_reset_email (dependencias: send_email, User)
-  * app/search.py         -> add_to_index / remove_from_index / query_index
-                             (dependencia: Elasticsearch)
-
-Ejecucion:
-    python -m unittest test_application_services -v
-    coverage run -m unittest test_application_services && coverage report -m
-"""
 import json
 import unittest
 from datetime import datetime, timezone
@@ -35,17 +17,10 @@ class TestConfig(Config):
     ADMINS = ['admin@example.com']
 
 
-# app/tasks.py ejecuta create_app() y empuja un app_context al IMPORTARSE.
-# Lo importamos con create_app reemplazado para que use la config de pruebas
-# (BD en memoria, sin logs en disco ni conexiones reales).
 _flask_app = app_pkg.create_app(TestConfig)
 with patch('app.create_app', return_value=_flask_app):
     from app import tasks
 
-
-# ---------------------------------------------------------------------------
-# Utilidades
-# ---------------------------------------------------------------------------
 class AppContextTestCase(unittest.TestCase):
     """Base: crea la app de pruebas y un contexto de peticion (necesario
     para current_app y para flask_babel `_()`)."""
@@ -58,17 +33,12 @@ class AppContextTestCase(unittest.TestCase):
     def tearDown(self):
         self.ctx.pop()
 
-
-# ===========================================================================
-# 1. tasks.export_posts  (servicio con "repositorio" db.session doblado)
-# ===========================================================================
 class ExportPostsServiceTest(AppContextTestCase):
     """Pruebas unitarias aisladas: db, sa, rq, mail, render_template y
     time.sleep se reemplazan por dobles."""
 
     def setUp(self):
         super().setUp()
-        # --- Dobles del "repositorio" (db.session) ---
         self.user = MagicMock(name='user', email='lu@example.com')
         self.posts = [
             MagicMock(body=f'post {i}',
@@ -81,7 +51,6 @@ class ExportPostsServiceTest(AppContextTestCase):
         self.mock_db.session.scalar.return_value = len(self.posts)
         self.mock_db.session.scalars.return_value = iter(self.posts)
 
-        # --- Otros colaboradores ---
         self.sa_patcher = patch.object(tasks, 'sa')
         self.sa_patcher.start()
         self.time_patcher = patch.object(tasks, 'time')
@@ -101,16 +70,13 @@ class ExportPostsServiceTest(AppContextTestCase):
     def test_export_sends_email_with_all_posts_attached(self):
         tasks.export_posts(user_id=7)
 
-        # se consulto el repositorio con el id correcto
         self.mock_db.session.get.assert_called_once_with(tasks.User, 7)
-        # se envio exactamente un correo, sincrono, al email del usuario
         self.mock_send_email.assert_called_once()
         args, kwargs = self.mock_send_email.call_args
         self.assertEqual(args[0], '[Microblog] Your blog posts')
         self.assertEqual(kwargs['sender'], 'admin@example.com')
         self.assertEqual(kwargs['recipients'], ['lu@example.com'])
         self.assertTrue(kwargs['sync'])
-        # el adjunto es JSON con los 3 posts, con timestamp ISO + 'Z'
         name, mime, payload = kwargs['attachments'][0]
         self.assertEqual((name, mime), ('posts.json', 'application/json'))
         data = json.loads(payload)
@@ -132,7 +98,6 @@ class ExportPostsServiceTest(AppContextTestCase):
     def test_export_reports_progress_in_order(self):
         tasks.export_posts(user_id=1)
 
-        # 0 al inicio; 33, 66, 100 por cada post; 100 final (finally)
         self.assertEqual(self.mock_progress.call_args_list,
                          [call(0), call(33), call(66), call(100), call(100)])
 
@@ -146,7 +111,7 @@ class ExportPostsServiceTest(AppContextTestCase):
         self.mock_db.session.scalar.return_value = 0
         self.mock_db.session.scalars.return_value = iter([])
 
-        tasks.export_posts(user_id=1)  # no debe lanzar ZeroDivisionError
+        tasks.export_posts(user_id=1) 
 
         _, kwargs = self.mock_send_email.call_args
         self.assertEqual(json.loads(kwargs['attachments'][0][2]),
@@ -157,17 +122,16 @@ class ExportPostsServiceTest(AppContextTestCase):
         self.mock_send_email.side_effect = RuntimeError('SMTP down')
 
         with patch.object(tasks.app, 'logger') as mock_logger:
-            tasks.export_posts(user_id=1)  # la excepcion se captura
+            tasks.export_posts(user_id=1) 
 
         mock_logger.error.assert_called_once()
         self.assertEqual(mock_logger.error.call_args[0][0],
                          'Unhandled exception')
-        # progreso forzado a 100 en el except y en el finally
         self.assertEqual(self.mock_progress.call_args_list[-2:],
                          [call(100), call(100)])
 
     def test_export_failure_when_user_not_found(self):
-        self.mock_db.session.get.return_value = None  # repositorio sin datos
+        self.mock_db.session.get.return_value = None 
 
         with patch.object(tasks.app, 'logger') as mock_logger:
             tasks.export_posts(user_id=999)
@@ -178,7 +142,6 @@ class ExportPostsServiceTest(AppContextTestCase):
 
 
 class SetTaskProgressUnitTest(AppContextTestCase):
-    """_set_task_progress con rq job y repositorio doblados."""
 
     def setUp(self):
         super().setUp()
@@ -211,7 +174,7 @@ class SetTaskProgressUnitTest(AppContextTestCase):
         self.task.user.add_notification.assert_called_once_with(
             'task_progress', {'task_id': 'job-1', 'progress': 40})
         self.mock_db.session.commit.assert_called_once_with()
-        self.assertFalse(self.task.complete)  # < 100: sigue incompleta
+        self.assertFalse(self.task.complete)  
 
     def test_progress_100_marks_task_complete(self):
         with patch.object(tasks, 'get_current_job', return_value=self.job):
@@ -220,10 +183,6 @@ class SetTaskProgressUnitTest(AppContextTestCase):
         self.assertTrue(self.task.complete)
         self.mock_db.session.commit.assert_called_once_with()
 
-
-# ===========================================================================
-# 1b. Integracion: servicio real + BD SQLite en memoria; solo se dobla rq
-# ===========================================================================
 class SetTaskProgressIntegrationTest(AppContextTestCase):
     def setUp(self):
         super().setUp()
@@ -261,10 +220,6 @@ class SetTaskProgressIntegrationTest(AppContextTestCase):
 
         self.assertTrue(db.session.get(Task, 'job-1').complete)
 
-
-# ===========================================================================
-# 2. translate.translate  (requests.post doblado)
-# ===========================================================================
 class TranslateServiceTest(AppContextTestCase):
     def _response(self, status=200, body=None):
         resp = MagicMock(status_code=status)
@@ -336,10 +291,6 @@ def _translate(*args):
     from app.translate import translate
     return translate(*args)
 
-
-# ===========================================================================
-# 3. email.send_email / send_async_email  (mail y Thread doblados)
-# ===========================================================================
 class SendEmailServiceTest(AppContextTestCase):
     @patch('app.email.Thread')
     @patch('app.email.mail')
@@ -403,11 +354,7 @@ class SendEmailServiceTest(AppContextTestCase):
         fake_app.app_context.assert_called_once_with()
         fake_app.app_context.return_value.__enter__.assert_called_once()
         mock_mail.send.assert_called_once_with(msg)
-
-
-# ===========================================================================
-# 4. auth.email.send_password_reset_email  (send_email y User doblados)
-# ===========================================================================
+     
 class PasswordResetEmailServiceTest(AppContextTestCase):
     def setUp(self):
         super().setUp()
@@ -452,10 +399,6 @@ class PasswordResetEmailServiceTest(AppContextTestCase):
         with self.assertRaises(ConnectionError):
             send_password_reset_email(self.user)
 
-
-# ===========================================================================
-# 5. search (Elasticsearch doblado)
-# ===========================================================================
 class SearchServiceTest(AppContextTestCase):
     def setUp(self):
         super().setUp()
@@ -493,7 +436,7 @@ class SearchServiceTest(AppContextTestCase):
         self.assertEqual((ids, total), ([10, 3], 2))
         kwargs = self.es.search.call_args.kwargs
         self.assertEqual(kwargs['index'], 'post')
-        self.assertEqual(kwargs['from_'], 10)  # (page-1)*per_page
+        self.assertEqual(kwargs['from_'], 10)  
         self.assertEqual(kwargs['size'], 10)
 
     def test_query_index_without_results(self):

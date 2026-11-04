@@ -1,0 +1,11 @@
+test_delete_user (test_user_repository.TestUserRepository.test_delete_user) ... ok
+test_duplicate_email (test_user_repository.TestUserRepository.test_duplicate_email) ... ok
+test_find_nonexistent_user (test_user_repository.TestUserRepository.test_find_nonexistent_user) ... ok
+test_find_user_by_id (test_user_repository.TestUserRepository.test_find_user_by_id) ... ok
+test_insert_user (test_user_repository.TestUserRepository.test_insert_user) ... ok
+test_update_user (test_user_repository.TestUserRepository.test_update_user) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.141s
+
+OK

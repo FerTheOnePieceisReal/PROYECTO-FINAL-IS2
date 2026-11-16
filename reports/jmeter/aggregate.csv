@@ -1,0 +1,300 @@
+1794796437083,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-1,text,true,,7250,128,1,1,http://127.0.0.1:5000/auth/login,4,0,0
+1794796437092,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-1,text,true,,7263,131,1,1,http://127.0.0.1:5000/auth/register,3,0,1
+1794796437182,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-2,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796437186,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-2,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796437096,135,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-1,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,135,0,0
+1794796437283,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-3,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437286,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-3,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796437189,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-2,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796437383,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-4,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437387,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-4,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796437289,136,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-3,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,136,0,1
+1794796437484,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-5,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437487,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-5,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796437390,136,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-4,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,136,0,0
+1794796437582,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-6,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796437585,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-6,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796437491,140,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-5,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,140,0,0
+1794796437682,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-7,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796437685,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-7,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796437588,138,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-6,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,138,0,0
+1794796437784,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-8,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437787,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-8,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796437688,132,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-7,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,132,0,0
+1794796437882,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-9,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437885,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-9,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796437790,138,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-8,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,138,0,0
+1794796437983,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-10,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796437986,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-10,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796437889,135,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-9,text,true,,642,314,2,2,http://127.0.0.1:5000/api/users,135,0,0
+1794796438084,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-11,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796438087,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-11,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796437989,132,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-10,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,132,0,1
+1794796438181,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-12,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796438185,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-12,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438090,149,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-11,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,149,0,1
+1794796438282,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-13,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796438285,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-13,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438188,139,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-12,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,139,0,0
+1794796438381,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-14,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796438385,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-14,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438288,137,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-13,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,137,0,0
+1794796438482,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-15,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796438485,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-15,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438388,142,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-14,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,142,0,0
+1794796438581,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-16,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796438585,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-16,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438488,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-15,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796438683,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-17,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796438687,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-17,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438589,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-16,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796438784,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-18,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796438788,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-18,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438691,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-17,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796438884,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-19,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796438887,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-19,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796438791,140,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-18,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,140,0,0
+1794796438982,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-20,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796438985,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-20,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796438891,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-19,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796439082,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-21,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796439086,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-21,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796438988,149,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-20,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,149,0,0
+1794796439191,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-22,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796439195,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-22,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439089,150,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-21,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,150,0,0
+1794796439286,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-23,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796439290,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-23,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439198,142,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-22,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,142,0,0
+1794796439381,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-24,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796439385,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-24,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439293,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-23,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796439491,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-25,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796439495,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-25,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796439388,139,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-24,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,139,0,0
+1794796439587,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-26,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796439591,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-26,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439499,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-25,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796439698,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-27,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796439702,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-27,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439594,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-26,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,1
+1794796439794,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-28,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796439797,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-28,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796439705,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-27,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796439888,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-29,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796439892,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-29,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796439800,146,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-28,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,146,0,1
+1794796439982,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-30,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796439986,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-30,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796439895,145,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-29,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,0
+1794796440092,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-31,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796440096,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-31,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796439989,133,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-30,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,133,0,0
+1794796440188,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-32,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440191,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-32,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796440099,132,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-31,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,132,0,0
+1794796440283,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-33,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440286,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-33,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796440195,153,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-32,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,153,0,0
+1794796440394,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-34,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796440398,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-34,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796440290,157,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-33,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,157,0,0
+1794796440488,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-35,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440492,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-35,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796440401,139,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-34,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,138,0,0
+1794796440583,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-36,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440586,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-36,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796440494,142,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-35,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,142,0,1
+1794796440692,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-37,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440695,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-37,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796440589,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-36,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796440787,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-38,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796440790,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-38,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796440698,132,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-37,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,132,0,1
+1794796440896,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-39,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796440900,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-39,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796440793,134,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-38,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,134,0,1
+1794796440990,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-40,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796440994,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-40,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796440903,135,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-39,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,135,0,1
+1794796441085,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-41,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796441089,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-41,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796440997,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-40,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,1
+1794796441196,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-42,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796441200,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-42,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796441092,138,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-41,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,138,0,1
+1794796441291,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-43,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796441295,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-43,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796441203,135,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-42,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,135,0,0
+1794796441386,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-44,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796441390,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-44,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,0
+1794796441298,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-43,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796441496,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-45,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796441500,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-45,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796441395,146,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-44,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,0
+1794796441591,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-46,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796441595,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-46,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796441503,148,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-45,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,148,0,0
+1794796441687,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-47,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796441694,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-47,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796441598,145,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-46,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,0
+1794796441782,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-48,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796441786,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-48,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796441698,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-47,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796441893,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-49,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796441896,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-49,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796441789,131,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-48,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,131,0,1
+1794796441986,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-50,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796441990,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-50,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796441899,150,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-49,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,150,0,1
+1794796442082,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-51,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796442086,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-51,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796441994,144,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-50,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796442191,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-52,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796442200,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-52,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796442089,144,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-51,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,144,0,1
+1794796442286,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-53,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796442290,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-53,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796442203,145,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-52,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,144,0,0
+1794796442396,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-54,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796442400,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-54,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796442293,147,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-53,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,147,0,1
+1794796442490,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-55,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796442494,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-55,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796442403,155,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-54,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,155,0,1
+1794796442585,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-56,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796442589,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-56,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796442498,172,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-55,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,172,0,0
+1794796442695,2,TC1 - Login,200,OK,TG - Pruebas de Carga 1-57,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,2,0,0
+1794796442702,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-57,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796442593,160,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-56,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,160,0,1
+1794796442789,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-58,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796442793,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-58,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796442704,151,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-57,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,151,0,1
+1794796442884,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-59,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796442887,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-59,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796442796,152,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-58,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,152,0,0
+1794796442996,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-60,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796443000,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-60,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796442890,140,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-59,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,140,0,0
+1794796443090,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-61,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443093,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-61,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796443003,142,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-60,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,142,0,1
+1794796443182,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-62,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443185,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-62,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443096,154,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-61,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,154,0,1
+1794796443282,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-63,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796443285,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-63,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796443189,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-62,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796443383,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-64,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443386,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-64,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796443289,134,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-63,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,134,0,0
+1794796443484,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-65,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443487,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-65,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443390,134,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-64,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,134,0,0
+1794796443581,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-66,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796443585,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-66,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443490,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-65,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796443682,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-67,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796443686,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-67,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443588,148,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-66,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,148,0,0
+1794796443782,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-68,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443785,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-68,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796443689,154,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-67,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,153,0,1
+1794796443882,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-69,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443885,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-69,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443789,150,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-68,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,150,0,0
+1794796443982,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-70,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796443985,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-70,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443888,151,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-69,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,150,0,1
+1794796444082,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-71,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444086,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-71,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796443988,148,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-70,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,148,0,1
+1794796444192,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-72,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444196,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-72,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796444089,139,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-71,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,139,0,1
+1794796444287,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-73,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444291,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-73,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796444199,146,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-72,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,1
+1794796444397,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-74,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444401,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-74,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796444294,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-73,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796444492,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-75,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796444496,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-75,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,0
+1794796444404,160,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-74,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,160,0,1
+1794796444586,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-76,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444590,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-76,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796444500,167,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-75,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,167,0,0
+1794796444696,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-77,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796444700,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-77,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796444593,159,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-76,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,158,0,1
+1794796444793,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-78,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796444797,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-78,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,0
+1794796444704,157,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-77,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,157,0,0
+1794796444886,5,TC1 - Login,200,OK,TG - Pruebas de Carga 1-79,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,5,0,1
+1794796444892,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-79,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,0
+1794796444801,157,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-78,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,157,0,0
+1794796444996,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-80,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,1
+1794796445000,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-80,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796444896,144,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-79,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,144,0,1
+1794796445091,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-81,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445094,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-81,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796445003,136,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-80,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,136,0,0
+1794796445186,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-82,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796445190,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-82,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796445097,136,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-81,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,136,0,0
+1794796445282,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-83,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796445286,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-83,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796445193,140,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-82,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,140,0,0
+1794796445393,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-84,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445396,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-84,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796445290,137,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-83,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,137,0,0
+1794796445486,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-85,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445489,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-85,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796445400,141,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-84,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,141,0,0
+1794796445594,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-86,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796445598,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-86,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796445492,144,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-85,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,144,0,1
+1794796445688,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-87,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445692,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-87,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796445601,138,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-86,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,138,0,0
+1794796445784,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-88,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445787,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-88,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796445695,135,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-87,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,135,0,0
+1794796445894,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-89,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445898,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-89,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796445790,136,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-88,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,136,0,1
+1794796445989,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-90,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796445992,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-90,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796445901,133,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-89,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,133,0,0
+1794796446083,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-91,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796446087,2,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-91,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,2,0,0
+1794796445996,143,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-90,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,143,0,0
+1794796446193,5,TC1 - Login,200,OK,TG - Pruebas de Carga 1-92,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,5,0,1
+1794796446198,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-92,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796446089,154,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-91,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,153,0,1
+1794796446287,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-93,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796446292,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-93,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796446202,140,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-92,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,140,0,0
+1794796446382,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-94,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796446386,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-94,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796446295,145,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-93,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,0
+1794796446491,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-95,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,1
+1794796446495,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-95,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796446389,145,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-94,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,145,0,0
+1794796446585,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-96,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796446589,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-96,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796446499,152,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-95,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,152,0,0
+1794796446693,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-97,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796446696,4,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-97,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,4,0,1
+1794796446592,157,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-96,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,157,0,1
+1794796446787,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-98,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796446790,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-98,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796446700,154,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-97,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,154,0,1
+1794796446881,4,TC1 - Login,200,OK,TG - Pruebas de Carga 1-99,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,4,0,0
+1794796446885,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-99,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,1
+1794796446793,149,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-98,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,149,0,1
+1794796446992,3,TC1 - Login,200,OK,TG - Pruebas de Carga 1-100,text,true,,7250,128,2,2,http://127.0.0.1:5000/auth/login,3,0,0
+1794796446996,3,TC2 - Registro,200,OK,TG - Pruebas de Carga 1-100,text,true,,7263,131,2,2,http://127.0.0.1:5000/auth/register,3,0,0
+1794796446888,155,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-99,text,true,,643,316,2,2,http://127.0.0.1:5000/api/users,155,0,1
+1794796446999,151,TC3 - Crear Usuario,201,CREATED,TG - Pruebas de Carga 1-100,text,true,,644,318,1,1,http://127.0.0.1:5000/api/users,151,0,1

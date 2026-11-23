@@ -200,11 +200,8 @@ class User(PaginatedAPIMixin, UserMixin, db.Model):
             query.subquery()))
 
     def add_notification(self, name, data):
-        db.session.execute(self.notifications.delete().where(
-            Notification.name == name))
-        n = Notification(name=name, payload_json=json.dumps(data), user=self)
-        db.session.add(n)
-        return n
+        from app.services.notification_service import NotificationService
+        return NotificationService.add_notification(self, name, data)
 
     def launch_task(self, name, description, *args, **kwargs):
         rq_job = current_app.task_queue.enqueue(f'app.tasks.{name}', self.id,
@@ -257,26 +254,17 @@ class User(PaginatedAPIMixin, UserMixin, db.Model):
             self.set_password(data['password'])
 
     def get_token(self, expires_in=3600):
-        now = datetime.now(timezone.utc)
-        if self.token and self.token_expiration.replace(
-                tzinfo=timezone.utc) > now + timedelta(seconds=60):
-            return self.token
-        self.token = secrets.token_hex(16)
-        self.token_expiration = now + timedelta(seconds=expires_in)
-        db.session.add(self)
-        return self.token
+        from app.services.user_token_service import UserTokenService
+        return UserTokenService.get_token(self, expires_in)
 
     def revoke_token(self):
-        self.token_expiration = datetime.now(timezone.utc) - timedelta(
-            seconds=1)
+        from app.services.user_token_service import UserTokenService
+        return UserTokenService.revoke_token(self)
 
     @staticmethod
     def check_token(token):
-        user = db.session.scalar(sa.select(User).where(User.token == token))
-        if user is None or user.token_expiration.replace(
-                tzinfo=timezone.utc) < datetime.now(timezone.utc):
-            return None
-        return user
+        from app.services.user_token_service import UserTokenService
+        return UserTokenService.check_token(token)
 
 
 @login.user_loader

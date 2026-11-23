@@ -1,7 +1,7 @@
 import unittest
 from datetime import datetime, timezone, timedelta
 from app import create_app, db
-from app.models import User
+from app.models import User, Notification
 from config import Config
 
 class TestConfig(Config):
@@ -80,3 +80,46 @@ class TestUserModel(unittest.TestCase):
         self.assertIsNotNone(token)
         self.assertIsInstance(token, str)
         self.assertGreater(u.token_expiration.replace(tzinfo=timezone.utc), datetime.now(timezone.utc))
+
+    def test_add_notification(self):
+        # Arrange
+        u = User(username='alice', email='alice@example.com')
+        db.session.add(u)
+        db.session.commit()
+
+        # Act
+        notification = u.add_notification(
+            'unread_message_count',
+            {'count': 5}
+        )
+        db.session.commit()
+
+        # Assert
+        self.assertIsNotNone(notification.id)
+        self.assertEqual(notification.name, 'unread_message_count')
+        self.assertEqual(notification.get_data(), {'count': 5})
+        self.assertEqual(notification.user_id, u.id)
+
+
+    def test_add_notification_replaces_existing_notification(self):
+        # Arrange
+        u = User(username='bob', email='bob@example.com')
+        db.session.add(u)
+        db.session.commit()
+
+        u.add_notification('unread_message_count', {'count': 2})
+        db.session.commit()
+
+        # Act
+        u.add_notification('unread_message_count', {'count': 7})
+        db.session.commit()
+
+        # Assert
+        notifications = db.session.scalars(
+            u.notifications.select().where(
+                Notification.name == 'unread_message_count'
+            )
+        ).all()
+
+        self.assertEqual(len(notifications), 1)
+        self.assertEqual(notifications[0].get_data(), {'count': 7})
